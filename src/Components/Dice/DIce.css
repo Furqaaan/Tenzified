@@ -1,0 +1,19 @@
+.dice-item {
+	background-color: white;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	border-bottom: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 24px;
+	font-family: monospace;
+}
+
+.dice-item:hover {
+	background-color: #59E391;
+	cursor: pointer;
+	color:white;
+}
