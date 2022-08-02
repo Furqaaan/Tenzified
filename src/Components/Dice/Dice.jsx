@@ -9,7 +9,7 @@ export default function Dice(props) {
 	}
 
 	return (
-		<div className="dice-item" onClick={() => props.clickHandler(props.diceId)} style={props.isHeld ? styles : {}}>
+		<div className="dice-item animate__animated animate__tada" onClick={(event) => props.clickHandler(event,props.diceId)} style={props.isHeld ? styles : {}}>
 			{props.value}
 		</div>
 	)

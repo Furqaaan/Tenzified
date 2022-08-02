@@ -2,7 +2,7 @@ import "./Header.css";
 
 function Header() {
 	return ( 
-		<div class="title-container">
+		<div className="title-container">
 			<h2>TENZIFIED</h2>
 			<h2>TENZIFIED</h2>
 			<h2>TENZIFIED</h2>

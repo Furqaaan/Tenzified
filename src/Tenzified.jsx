@@ -26,6 +26,7 @@ export default function Tenzified() {
 	}
 
 	function generateNewDiceSet() {
+			playSound('audio/dice-roll.mp3');
 			setDices((prev) => {
 				return prev.map((item) => {
 					if (item.isHeld)
@@ -37,6 +38,9 @@ export default function Tenzified() {
 	}
 
 	function generateNewGame() {
+
+		playSound('audio/new-game.mp3');
+
 		setTenzified(false);
 		setDices(generateInitialDices());
 	}
@@ -50,7 +54,13 @@ export default function Tenzified() {
 		return newDice;
 	}
 
-	function makeDiceHeld(id) {
+	function makeDiceHeld(event,id) {
+
+		event.target.classList.remove('animate__tada');
+		event.target.classList.add('animate__heartBeat');
+
+		playSound('audio/dice-click.mp3');
+
 		setDices((prev)=>{
 			return prev.map((item)=>{
 				if(item.id == id){
@@ -72,8 +82,14 @@ export default function Tenzified() {
 		})
 
 		if(isTenzified){
+			playSound('audio/victory.mp3');
 			setTenzified(isTenzified);
 		}
+	}
+
+	function playSound(file){
+		let audio = new Audio(file);
+		audio.play();
 	}
 
 	let diceElements = dices.map((item) => {

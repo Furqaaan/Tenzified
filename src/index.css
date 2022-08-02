@@ -8,3 +8,7 @@
 body {
 	background: #f3f3f3;
 }
+
+.animate__animated.animate__bounce {
+	--animate-duration: .6s;
+}
