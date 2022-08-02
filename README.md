@@ -1,5 +1,5 @@
 # Tenzified
-<p>Welcome to <a href="https://tenzified.netlify.app">Tenzified</a>.</p>
+<p>Welcome to <a href="https://tenzified.netlify.app" target="_blank">Tenzified</a> .</p>
 <p>Make all of the ten dices show same number.</p>
 <p>Roll dices to quickly get a new set of dices..</p>
 <p>Keep rolling until all ten of your dices show the same number..</p>
