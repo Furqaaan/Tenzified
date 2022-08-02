@@ -12,9 +12,11 @@ export default function Tenzified() {
 
 	let [dices, setDices] = useState(generateInitialDices());
 	let [tenzified,setTenzified] = useState(false);
+	let [isAllHeld,setIsAllHeld] = useState(false);
 
 	useEffect(()=>{
 		checkTenzified();
+		checkIfAllHeld();
 	},[dices])
 
 	function generateInitialDices() {
@@ -87,6 +89,16 @@ export default function Tenzified() {
 		}
 	}
 
+	function checkIfAllHeld() {
+		let isAllHeld = dices.every((dice) => {
+			if (dice.isHeld)
+				return true;
+			else
+				return false;
+		})
+		setIsAllHeld(isAllHeld);
+	}
+
 	function playSound(file){
 		let audio = new Audio(file);
 		audio.play();
@@ -107,7 +119,7 @@ export default function Tenzified() {
 				{diceElements}
 			</div>
 			<div className="btn-container">
-				{!tenzified && <RollDiceBtn clickHandler={generateNewDiceSet}/>}
+				{(!tenzified && !isAllHeld) && <RollDiceBtn clickHandler={generateNewDiceSet}/>}
 				<NewGameBtn clickHandler={generateNewGame} />
 			</div>
 			{tenzified && <Confetti />}
