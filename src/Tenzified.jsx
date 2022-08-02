@@ -4,8 +4,9 @@ import Dice from "./Components/Dice/Dice";
 import RollDiceBtn from "./Components/RollBtn/RollDiceBtn";
 import NewGameBtn from "./Components/NewGameBtn/NewGameBtn";
 import Confetti from 'react-confetti'
-
+import Header from "./Components/Header/Header";
 import "./Tenzified.css";
+import Manual from "./Components/Manual/Manual";
 
 export default function Tenzified() {
 
@@ -82,6 +83,10 @@ export default function Tenzified() {
 
 	return (
 		<div className="tenzified-app">
+			<div className="header-container">
+				<Header/>
+				<Manual/>
+			</div>
 			<div className='dice-container'>
 				{diceElements}
 			</div>
