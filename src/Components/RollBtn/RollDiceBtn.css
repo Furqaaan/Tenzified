@@ -1,0 +1,17 @@
+.roll-dice-btn {
+	background-color: #ff5c6c;
+	padding: 14px;
+	font-family: monospace;
+	border: 0;
+	border-bottom: 4px solid #dc3545;
+	font-size: 18px;
+	color: white;
+	border-radius: 6px;
+}
+
+.roll-dice-btn:hover {
+	background-color: #dc3545;
+	color: white;
+	cursor: pointer;
+}
+

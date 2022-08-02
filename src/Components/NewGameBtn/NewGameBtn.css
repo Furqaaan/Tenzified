@@ -1,0 +1,17 @@
+.new-game-btn {
+	background-color: #3b80ee;
+	padding: 14px;
+	font-family: monospace;
+	border: 0;
+	border-bottom: 4px solid #2770e7;
+	font-size: 18px;
+	color: white;
+	border-radius: 6px;
+}
+
+.new-game-btn:hover {
+	background-color: #2770e7;
+	color: white;
+	cursor: pointer;
+}
+
